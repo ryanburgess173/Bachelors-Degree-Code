@@ -1,0 +1,42 @@
+
+Hex	Binary
+ 0	 0000
+ 1 	 0001
+ 2	 0010
+ 3	 0011
+ 4	 0100
+ 5	 0101
+ 6	 0110
+ 7	 0111
+ 8	 1000
+ 9	 1001
+ A	 1010
+ B	 1011
+ C	 1100
+ D	 1101
+ E	 1110
+ F	 1111
+
+Hex = Binary
+10 = 0001 0000
+11 = 0001 0001
+12 = 0001 0010
+.. ..
+19 = 0001 1001
+1A = 0001 1010
+.. ..
+1F = 0001 1111
+20 = 0010 0000
+
+8 Bits = Byte (2 Hex digits) Example: 0x44
+16 Bits = Halfword (4 Hex digits) Example: 0xB0C8
+32 Bits = Word (8 Hex digits) Example: 0xDEDD0020
+64 Bits = Double-Word (16 Hex digits)
+128 Bits = Quadword (32 Hex digits)
+
+
+128 64 32 16    8 4 2 1
+Practice Conversion: (Hex, Binary, Decimal)
+4B          AF          3A          C5
+0100 1011   1010 1111   0011 1010   1100 0101
+75          175         58          197        

@@ -1,0 +1,11 @@
+console.log("Hello World");
+var found = true;
+var grade = 88.6;
+var firstName = "Johnathan";
+var lastName = "Burgess";
+var myData = 50.0;
+myData = false;
+myData = 'Eric';
+myData = 19;
+console.log(myData);
+console.log("Hi ".concat(firstName, " ").concat(lastName, "!"));
