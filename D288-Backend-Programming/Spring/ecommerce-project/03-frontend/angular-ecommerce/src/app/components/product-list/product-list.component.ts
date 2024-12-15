@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductService } from '../../services/product.service';
 import { Product } from '../../common/product';
@@ -9,15 +9,16 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
   templateUrl: './product-list-grid.component.html',
   styleUrls: ['./product-list.component.css'],
   standalone: true,
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule],
 })
 export class ProductListComponent implements OnInit {
-
   products: Product[] = [];
   currentCategoryId: number = 1;
 
-  constructor(private productService: ProductService,
-              private route: ActivatedRoute) { }
+  constructor(
+    private productService: ProductService,
+    @Inject(ActivatedRoute) private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => {
@@ -35,11 +36,11 @@ export class ProductListComponent implements OnInit {
     }
     console.log(this.currentCategoryId);
 
-    this.productService.getProductList(this.currentCategoryId).subscribe(
-      data => {
+    this.productService
+      .getProductList(this.currentCategoryId)
+      .subscribe((data) => {
         this.products = data;
         console.log(data);
-      }
-    );
+      });
   }
 }
